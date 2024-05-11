@@ -62,6 +62,7 @@
                 // Ler os registros retornando do BD
                 $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
                 //var_dump($row_usuario);
+                
                 // Acessar o IF quando a senha é válida
                 if(password_verify($dados['senha_usuario'], $row_usuario
                 ['senha_usuario'])){

@@ -111,7 +111,8 @@
                     <input type="submit" name= "ValCodigo" value= "Validar" class="next" onclick="nextStep()">  
 
                 </div>
-                <a href="#" class="esqueceu-senha">Esqueceu o código?</a>
+                <a href="reenviar_codigo.php" class="esqueceu-senha">Reenviar código?</a>
+
             </form>
         </div>
 
