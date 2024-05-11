@@ -14,11 +14,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-
-    <h2>Digite o código enviado no e-mail cadastrado.</h2>
     <?php
         // Receber dados do formulario
         $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -87,16 +96,42 @@
     }
     ?>
 
+<main class="d-flex align-items-center justify-content-center">
+        <div class="form-container" id="form-container">
+            <form method="POST" action="" id="multi-step-form">
+                <div id="step1">
+                    <div class="info-step-1">
+                        <p class="p-1">Código de verificação.</p>
+                    </div>
+                    <div class="input-box"> 
+                        <img src="img/pessoa.png" alt="Figura de uma carta">
+                        <input type="text" name="codigo_autenticacao" placeholder="Digite o código:" required>
+                    </div>
+
+                    <input type="submit" name= "ValCodigo" value= "Validar" class="next" onclick="nextStep()">  
+
+                </div>
+                <a href="#" class="esqueceu-senha">Esqueceu o código?</a>
+            </form>
+        </div>
+
+    </main>
+
 
     
-    <form method="POST" action="">
+    <!-- <form method="POST" action="">
         <label>Código: </label>
         <input type="text" name="codigo_autenticacao" placeholder="Digite o código:"><br><br>
 
         <input type="submit" name="ValCodigo" value="Validar"><br><br>
 
-    </form><br>
+    </form><br> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 
 </body>
 </html>
