@@ -62,7 +62,7 @@
                 // Ler os registros retornando do BD
                 $row_usuario = $result_usuario->fetch(PDO::FETCH_ASSOC);
                 //var_dump($row_usuario);
-                
+
                 // Acessar o IF quando a senha é válida
                 if(password_verify($dados['senha_usuario'], $row_usuario
                 ['senha_usuario'])){
@@ -118,7 +118,7 @@
                     $mail->addAddress($row_usuario['usuario'], $row_usuario['nome']); // Email de destino
                     $mail->isHTML(true); // Definir formatto de email para HTML
                     $mail->Subject    = 'Aqui está o código de verificação de 8 dígitos solicitado.'; //Título do email
-                    $mail->Body       = "Olá" . $row_usuario['nome'] . ", Autenticação multifator.<br><br>Seu código de verificação de 8 dígitos é $codigo_autenticacao<br><br> 
+                    $mail->Body       = "Olá " . $row_usuario['nome'] . ", Seu código de verificação de 8 dígitos é $codigo_autenticacao<br><br> 
                     Esse código foi enviado para verificar seu login.<br><br>"; // Conteudo do email em formato HTML
                     $mail->AltBody    = "Olá" . $row_usuario['nome'] . ", Autenticação multifator.\n\nSeu código de verificação de 8 dígitos é $codigo_autenticacao\n\n
                     Esse código foi enviado para verificar seu login."; // Conteudo do email em formato texto

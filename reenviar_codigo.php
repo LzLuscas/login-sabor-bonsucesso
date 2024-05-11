@@ -49,7 +49,7 @@ try {
     // Conteudo do email
     $mail->isHTML(true);
     $mail->Subject    = 'Reenvio de código de verificação';
-    $mail->Body       = "Olá " . $_SESSION['nome'] . ",\n\nSeu novo código de verificação é: $novo_codigo\n\nEsse código foi reenviado para verificar seu login.";
+    $mail->Body       = "Olá" . $_SESSION['nome'] . ",\n\nseu novo código de verificação é: $novo_codigo\n\n<br><br>Este código foi reenviado para verificar seu login.";
     
     // Envia email
     $mail->send();
