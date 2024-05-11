@@ -24,7 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index2.css">
     <title>Document</title>
 </head>
 <body>
@@ -104,7 +104,7 @@
                         <p class="p-1">Código de verificação.</p>
                     </div>
                     <div class="input-box"> 
-                        <img src="img/pessoa.png" alt="Figura de uma carta">
+                        <img src="img/comunicacao.png" alt="Figura de uma carta">
                         <input type="text" name="codigo_autenticacao" placeholder="Digite o código:" required>
                     </div>
 
