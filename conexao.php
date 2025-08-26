@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "login";
+$dbname = "restaurante";
 $port = 3306;
 
 
